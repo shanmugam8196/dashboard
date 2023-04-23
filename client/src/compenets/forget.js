@@ -10,7 +10,7 @@ export default function Forget(){
         var datastring = new FormData(event.target);
         var config = {headers:{"enctype":"multipart/form-data"}};
 
-        axios.post('http://localhost:3000/Forget',datastring,config)
+        axios.post('https://dashboard-phi-liard.vercel.app/Forget',datastring,config)
         .then(function(response){
             if(response.data.status === 'error'){
                 alert('Query Error');

@@ -9,7 +9,7 @@ export default function Dashboard(){
     const [userdetails,setUserdetails] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3000/Get_userdetails/'+userid)
+        fetch('https://dashboard-phi-liard.vercel.app/Get_userdetails/'+userid)
         .then(response=>response.json())
         .then(json=>setUserdetails(json));
     },[]);

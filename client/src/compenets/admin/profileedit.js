@@ -10,7 +10,7 @@ export default function Profileedit(){
         var datastring = new FormData(event.target);
         var config = {headers:{"enctype":"multipart/form-data"}};
 
-        axios.post('http://localhost:3000/profileupload',datastring,config)
+        axios.post('https://dashboard-phi-liard.vercel.app/profileupload',datastring,config)
         .then(function(response){
             if(response.data.status === 'error'){
                 // alert('Error');

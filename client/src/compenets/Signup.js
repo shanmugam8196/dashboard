@@ -10,7 +10,7 @@ export default function Signup(){
         var datastring = new FormData(event.target);
         var config = {headers:{"enctype":"multipart/form-data"}};
 
-        axios.post('http://localhost:3000/Registration',datastring,config)
+        axios.post('https://dashboard-phi-liard.vercel.app/Registration',datastring,config)
         .then(function(response){
             if(response.data.status === 'error'){
                 // alert('Error');

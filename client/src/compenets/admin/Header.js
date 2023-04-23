@@ -18,7 +18,7 @@ export default function Header(){
     let [username,setUsername] = useState('');
 
     useEffect(()=>{
-        fetch('http://localhost:3000/View_par_user/'+userid)
+        fetch('https://dashboard-phi-liard.vercel.app/View_par_user/'+userid)
         .then(response=>response.json())
         .then(json=>setUsername(json.status))
     },[]);

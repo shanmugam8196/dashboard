@@ -11,7 +11,7 @@ export default function Profilephoto(){
     const [viewphoto,setViewphoto] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3000/View_profilephoto/'+userid)
+        fetch('https://dashboard-phi-liard.vercel.app/View_profilephoto/'+userid)
         .then(response=>response.json())
         .then(json=>setViewphoto(json));
     },[]);
@@ -21,7 +21,7 @@ export default function Profilephoto(){
         var datastring = new FormData(event.target);
         var config = {headers:{"enctype":"multipart/form-data"}};
 
-        axios.post('http://localhost:3000/Add_profilephoto',datastring,config)
+        axios.post('https://dashboard-phi-liard.vercel.app/Add_profilephoto',datastring,config)
         .then(function(response){
             if(response.data.status === 'error'){
                 alert('Error');

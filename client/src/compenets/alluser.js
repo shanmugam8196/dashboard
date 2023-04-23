@@ -9,7 +9,7 @@ export default function Alluser(){
     const [userdetails,setUserdetails] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:3000/alluser')
+        fetch('https://dashboard-phi-liard.vercel.app/alluser')
         .then(response=>response.json())
         .then(json=>setUserdetails(json));
     },[]);

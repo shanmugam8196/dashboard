@@ -17,7 +17,7 @@ export default function Edit() {
     useEffect(()=>{
         // console.warn(id);
 
-        fetch("http://localhost:3000/Get_userdetails/"+userid)
+        fetch("https://dashboard-phi-liard.vercel.app/Get_userdetails/"+userid)
         .then((response) => response.json())
         .then((response)=>{
             setId(response[0].id);
@@ -34,7 +34,7 @@ export default function Edit() {
         var datastring = new FormData(event.target);
         var config = {headers : {"enctype":"multipart/form-data"}};
 
-        await axios.post('http://localhost:3000/Update',datastring,config)
+        await axios.post('https://dashboard-phi-liard.vercel.app/Update',datastring,config)
               .then(function(res){
                 if(res.data.status === 'success'){
                     toast('Updated', {
