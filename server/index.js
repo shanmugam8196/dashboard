@@ -70,7 +70,7 @@ app.post('/Registration',(request,response)=>{
     let imagefile = request.files.profile;
     let filename = imagefile.name;
     let path = __dirname+'/public/upload/'+imagefile.name;
-    let url = 'http://localhost:3000/upload';
+    let url = 'https://dashboard-phi-liard.vercel.app/upload';
 
     let {username,password,name,fathername,date_of_birth,email,phone} = request.body;
 
@@ -215,7 +215,7 @@ app.post('/Add_profilephoto',(request,response)=>{
     let filename = imagefile.name;
     let path = __dirname+'/public/upload/'+imagefile.name;
 
-    let url = 'http://localhost:3000/upload';
+    let url = 'https://dashboard-phi-liard.vercel.app/upload';
 
     let sql = 'insert into profilephoto(userid,url,filename,alt_text,status)values(?,?,?,?,?)';
 
